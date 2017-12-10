@@ -43,7 +43,7 @@ public class PotatoBagController {
 	 * 
 	 * @return
 	 */
-	@RequestMapping(method = RequestMethod.GET, value = "/getBags")
+	@RequestMapping(method = RequestMethod.GET, value = "/")
 	public @ResponseBody List<Bag> getBagList(@RequestParam(value = "count",  required = false) String count) {
 		
 		/**Default count is 3 */
@@ -58,7 +58,7 @@ public class PotatoBagController {
 	/**
 	 * This method will persist a new bag.
 	 */
-	@RequestMapping(method = RequestMethod.POST, value = "/addBag")
+	@RequestMapping(method = RequestMethod.POST, value = "/")
 	public ResponseEntity<String> addBag(@Valid Bag bag,BindingResult bindingResult){
 		
 		 List<String> errorMessages = new ArrayList<>();
