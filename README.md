@@ -7,17 +7,26 @@ Prerequite to run this  application on the local machine
 Please follow these instructions to execute the program on the local machine :
 
 1. Create a directory 
+   
    mkdir potatoApp
+   
 2. Move to potatoApp
+   
    cd potatoApp
+   
 3. Clone the code under this directory
+   
    git clone https://github.com/Arvind2083/potatoBagApplication.git
+   
 4. Go inside the directory potatoBagApplication
+
    cd potatoBagApplication
+   
 5. Start the Spring-Boot application.The below command will take few minutes to download all the dependencies.
+   
    mvn spring-boot:run
   
-   Once you see Started PotatoBagApplication in <<>> seconds,it mean application is started on the localhost.
+   Once you message is seen as "Started PotatoBagApplication in seconds" on console,it mean application is started on the localhost.
    
    TESTING OF THE APIs
    ===================
@@ -31,8 +40,7 @@ Please follow these instructions to execute the program on the local machine :
 
      Test cases :
 
-	 P.S : There are 4 hardcorded Bag list exists in the application.These list can be used to test the GET request api without creating 
-	       POST request.
+	 P.S : There are 4 hardcorded Bag list exists in the application.These list can be used to test the GET request api without creating POST request.
 	 
 	 GET Request
 	 ============
