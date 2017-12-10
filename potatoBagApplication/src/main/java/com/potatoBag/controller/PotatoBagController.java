@@ -44,10 +44,15 @@ public class PotatoBagController {
 	 * @return
 	 */
 	@RequestMapping(method = RequestMethod.GET, value = "/getBags")
-	public @ResponseBody List<Bag> getBagList(@RequestParam(value = "count",  required = false, defaultValue = "3") int count) {
+	public @ResponseBody List<Bag> getBagList(@RequestParam(value = "count",  required = false) String count) {
 		
+		/**Default count is 3 */
+		int cnt = 3;
+		if(null!= count && !count.equalsIgnoreCase("")){
+			cnt = Integer.valueOf(count);
+		}
 		/**Call to service layer to return the potato Bags*/
-		return potatoBagService.getBagList(count);
+		return potatoBagService.getBagList(cnt);
 	}
 	
 	/**
